@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Add a Todo</h1>
+
+<form method="POST" action="/todo">
+
+  {{ form.as_ul }}
+
+  {% csrf_token %}
+  <input type="submit"/>
+</form>
+
+{% endblock %}
+
